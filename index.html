@@ -3,46 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Responsivo</title>
+    <title>Mauro | Desenvolvedor Front-End</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="topo">
+    <header class="topo" id="inicio">
         <h1>Mauro | Desenvolvedor Front-End</h1>
         <p>Criando interfaces modernas, responsivas e focadas na experiência do usuário.</p>
     </header>
  
     <nav class="menu-navegacao">
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
     </nav>
 
-    <main class="container">
-        <section class="coluna-50">
-           <h2>Estética & Potência</h2> <p>Um exemplo de como o design e a performance se unem. Este card utiliza Flexbox para manter o alinhamento perfeito.</p>
-            <button class="btn-card">Saiba Mais</button>
+    <main>
+        <section id="sobre" class="container">
+            <div style="text-align: center; width: 100%;">
+                <h2>Sobre mim</h2>
+                <p>Sou desenvolvedor Front-End focado em transformar ideias em realidade através de código limpo e design responsivo. Atualmente, dedico-me a projetos que unem estética e performance.</p>
+            </div>
         </section>
 
-        <section class="coluna-50">
-            <h2>Tecnologia Web</h2>
-            <p>Mesmo com menos texto que a coluna anterior, este card se estica para manter a simetria do layout graças ao align-items: stretch.</p>
-            <button class="btn-card">Saiba Mais</button>
-        </section>
+        <section id="projetos" class="container">
+            <article class="coluna-50">
+                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=400&h=200&auto=format&fit=crop" alt="Projeto E-commerce">
+                <h2>E-commerce Store</h2> 
+                <p>Interface desenvolvida focada na conversão de vendas, utilizando conceitos de UI Design e Mobile-First.</p>
+                <button class="btn-card">Ver no GitHub</button>
+            </article>
 
-        <section class="coluna-50">
-            <h2>Design Moderno</h2>
-            <p>O uso de sombras (box-shadow) e bordas arredondadas cria uma profundidade que atrai o olhar do usuário.</p>
-            <button class="btn-card">Saiba Mais</button>
+            <article class="coluna-50">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&h=200&auto=format&fit=crop" alt="Projeto Landing Page">
+                <h2>Landing Page</h2>
+                <p>Página de alta performance com carregamento otimizado e layout 100% responsivo para todos os dispositivos.</p>
+                <button class="btn-card">Ver no GitHub</button>
+            </article>
+
+            <article class="coluna-50">
+                <img src="https://picsum.photos/id/180/400/200" alt="Projeto Dashboard">
+                <h2>Dashboard Moderno</h2>
+                <p>Exemplo de painel administrativo com foco na organização de dados e facilidade de navegação do usuário.</p>
+                <button class="btn-card">Ver no GitHub</button>
+            </article>
         </section>
     </main>
 
-    <footer class="rodape">
-        <p>&copy; 2026 - Desenvolvido por Mauro - Todos os direitos reservados</p>
-    </footer>
+    <footer class="rodape" id="contato">
+    <h3>Gostou do meu trabalho? Vamos conversar!</h3>
+    <div class="contatos-botoes">
+        <a href="https://www.linkedin.com/in/mauro-josu%C3%A9-moreira-2163623a3/" target="_blank" class="btn-contato linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://wa.me/55DDDSEUNUMERO" target="_blank" class="btn-contato whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+    <p>&copy; 2026 - Desenvolvido por Mauro - Rio Grande do Sul</p>
+</footer>
 
 </body>
 </html>
