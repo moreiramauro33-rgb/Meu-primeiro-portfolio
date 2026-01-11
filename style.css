@@ -1,9 +1,14 @@
 /* Reset básico e Fonte */
+html {
+    scroll-behavior: smooth; /* Deslize suave ao clicar nos links do menu */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    color: #333; /* Melhora a leitura do texto */
 }
 
 /* Topo Estilizado */
@@ -11,7 +16,7 @@ body {
     color: white;
     text-align: center;
     background-color: #1a2a6c;
-    padding: 40px 20px;
+    padding: 60px 20px; /* Aumentei um pouco o respiro */
     border-bottom: 5px solid #ffcc00;
 }
 
@@ -21,19 +26,22 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: sticky; /* O menu agora "gruda" no topo ao rolar */
+    top: 0;
+    z-index: 1000;
 }
 
 .menu-navegacao a {
     color: white;
-    padding: 14px 20px;
+    padding: 16px 25px;
     text-decoration: none;
-    transition: 0.3s;
-    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .menu-navegacao a:hover {
+    background-color: #1a2a6c;
     color: #ffcc00;
-    transform: scale(1.1);
 }
 
 /* Container Principal */
@@ -41,79 +49,111 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* Garante alturas iguais */
+    align-items: stretch;
     gap: 30px;
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 /* Cards (Colunas) */
 .coluna-50 {
-    flex: 1 1 350px;
-    max-width: 400px;
-    padding: 25px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Ajustei a base para caber melhor em tablets */
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 15px; /* Bordas um pouco mais modernas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
-    transition: 0.3s;
-    
-    /* Faz o conteúdo interno ser flex para o botão ir pro fim */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .coluna-50:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Imagens nos Cards */
 .coluna-50 img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
+    height: 200px; /* Altura fixa para manter o padrão */
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Títulos e Parágrafos nos Cards */
+.coluna-50 h2 {
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    color: #1a2a6c;
+}
+
+.coluna-50 p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
 }
 
 /* Botão do Card */
 .btn-card {
     background-color: #1a2a6c;
     color: white;
-    border: none;
+    text-decoration: none; /* Caso use a tag <a> */
+    text-align: center;
     padding: 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    border-radius: 8px;
+    font-weight: 600;
     transition: 0.3s;
-    margin-top: auto; /* Joga o botão para a base do card */
+    margin-top: auto;
+    border: 2px solid #1a2a6c;
 }
 
 .btn-card:hover {
-    background-color: #ffcc00;
-    color: #0d1b4a;
+    background-color: transparent;
+    color: #1a2a6c;
 }
 
 /* Rodapé */
 .rodape {
     text-align: center;
-    background-color: #1a2a6c;
+    background-color: #0d1b4a;
     color: #f4f4f4;
-    padding: 30px;
-    margin-top: 50px;
+    padding: 40px;
+    margin-top: 60px;
 }
 
 /* Responsividade Celular */
 @media (max-width: 600px) {
-    .coluna-50 {
-        flex: 1 1 100%;
-    }
-    .menu-navegacao a {
-        width: 100%;
-        text-align: center;
-    }
+    .topo { padding: 40px 15px; }
+    .coluna-50 { flex: 1 1 100%; max-width: 100%; }
+    .menu-navegacao a { width: 100%; text-align: center; border-bottom: 1px solid #1a2a6c; }
+}
+
+.contatos-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.btn-contato {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkedin { background-color: #0077b5; }
+.whatsapp { background-color: #25d366; }
+
+.btn-contato:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
